@@ -4,12 +4,12 @@
     {
         static void Main(string[] args)
         {
-            // The menu
+           //the menu
             int NewGame = 1;
             int LoadGame = 2;
             int Options = 3;
             int Quit = 4;
-            
+
                 Console.WriteLine(" ------------------");
                 Console.WriteLine("|      Menu        |");
                 Console.WriteLine("|  1 - New Game    |");
@@ -42,19 +42,40 @@
             {
                 Console.WriteLine("Exiting Game");
             }
-                   while (Response!=4 )
-
+            while (Response != 4)
+            {
                 Console.WriteLine(" ------------------");
-            Console.WriteLine("|      Menu        |");
-            Console.WriteLine("|  1 - New Game    |");
-            Console.WriteLine("|  2 - Load Game   |");
-            Console.WriteLine("|  3 - Options     |");
-            Console.WriteLine("|  4 - Quit        |");
-            Console.WriteLine(" ------------------");
-            Console.Write("Select An Option (1, 2, 3, 4) :");
-             Response = int.Parse(Console.ReadLine());
+                Console.WriteLine("|      Menu        |");
+                Console.WriteLine("|  1 - New Game    |");
+                Console.WriteLine("|  2 - Load Game   |");
+                Console.WriteLine("|  3 - Options     |");
+                Console.WriteLine("|  4 - Quit        |");
+                Console.WriteLine(" ------------------");
+                Console.Write("Select An Option (1, 2, 3, 4) :");
+                Response = int.Parse(Console.ReadLine());
+                if (Response == NewGame)
+                {
+                    Console.WriteLine("Creating New Game ...");
+                }
+            
+                if (Response == LoadGame)
+                {
+                    Console.WriteLine("Loading Game ...");
+                }
+              
+                if (Response == Options)
+                {
+                    Console.WriteLine("Loading Options");
+                }
+                
+                if (Response == Quit)
+                {
+                    Console.WriteLine("Exiting Game");
 
-
+                
+                }
+                
+            }
 
         }
     }
